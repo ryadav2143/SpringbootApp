@@ -10,7 +10,7 @@ import com.ds.sbapp.dto.Register;
 public class RegisterService {
     @Autowired
     private Registerdao dao;
-    public void saveRegister(Register register){
+    public Register saveRegister(Register register){
         return dao.saveRegister(register);
     }
 

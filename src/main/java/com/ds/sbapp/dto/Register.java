@@ -2,9 +2,9 @@ package com.ds.sbapp.dto;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.validation.constraints.Max;
-import jakarta.validation.constraints.Min;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
 
 @Entity
@@ -15,13 +15,13 @@ public class Register {
 
     @NotBlank(message = "Please enter the email")
     @Column(unique = true)
+    @Id
     private String email;
 
     @NotBlank
-    @Min(value = 8)
-    @Max(value=15)
+    @Size(min = 8,max =15)
     private String password;
 
     @NotBlank
-    private String comfirmpass;
+    private String confirmpass;
 }
