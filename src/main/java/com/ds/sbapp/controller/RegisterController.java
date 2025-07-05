@@ -17,7 +17,7 @@ public class RegisterController {
 
     @Autowired
     private RegisterService service;
-    @PostMapping("/save")
+    @PostMapping("/register")
     public ResponseEntity<String> saveRegister(@Valid @RequestBody Register register){
 
        if(!register.getPassword().equals(register.getConfirmpass())){
