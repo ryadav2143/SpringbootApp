@@ -24,7 +24,7 @@ public class RegisterController {
         return ResponseEntity.badRequest().body("Password not matched");
        }
        service.saveRegister(register);
-       return ResponseEntity.ok("user register successfully");
+       return ResponseEntity.ok("user registered successfully");
          
     }
 
