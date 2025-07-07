@@ -22,5 +22,10 @@ public class UserService {
         return userOpt.isPresent() && userOpt.get().getPassword().equals(password);
     }
 
+    public  String username(String email){
+        Optional<User> username=dao.fetchByEmail(email);
+        return username.get().getName();
+    } 
+
 
 }
